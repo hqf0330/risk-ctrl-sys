@@ -17,7 +17,7 @@ import java.util.Set;
  * 1. 继承RedisSinkFunction
  * 2. 使用第三方包 bachir-flink
  */
-public class RedisUtil {
+public class RedisWriteUtil {
 
     private static FlinkJedisClusterConfig JEDIS_CONF = null;
 

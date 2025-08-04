@@ -6,7 +6,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class RedisUtilTest {
+public class RedisWriteUtilTest {
 
     @DisplayName("测试基于bahirWithString")
     @Test
@@ -14,7 +14,7 @@ public class RedisUtilTest {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         Tuple2<String, String> input = Tuple2.of("test:bahir", "test-value");
         DataStreamSource<Tuple2<String, String>> ds = env.fromElements(input);
-        RedisUtil.writeByBachirWithString(ds);
+        RedisWriteUtil.writeByBachirWithString(ds);
 
         env.execute();
     }
