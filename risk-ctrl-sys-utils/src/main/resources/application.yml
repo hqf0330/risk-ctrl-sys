@@ -1,0 +1,16 @@
+spring:
+  redis:
+    cluster:
+      nodes:
+        redis:6379
+
+    lettuce:
+      pool:
+        # 最大空闲连接数
+        max-idle: 8
+        # 最大连接数
+        max-active: 8
+        # 最小空闲连接
+        min-idle: 2
+        # 最大建立连接等待时长
+        max-wait: 1
