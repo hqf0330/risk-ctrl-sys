@@ -38,6 +38,8 @@
         <hbase.version>2.0.6</hbase.version>
         <!-- hadoop -->
         <hadoop.version>2.7.7</hadoop.version>
+        <!-- clickhouse -->
+        <clickhouse-jdbc.version>0.3.2-patch11</clickhouse-jdbc.version>
     </properties>
 
     <dependencies>
@@ -185,6 +187,20 @@
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-common</artifactId>
                 <version>${hadoop.version}</version>
+            </dependency>
+
+            <!-- Jdbc Connector -->
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-connector-jdbc_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+
+            <!-- clickhouse jdbc driver -->
+            <dependency>
+                <groupId>com.clickhouse</groupId>
+                <artifactId>clickhouse-jdbc</artifactId>
+                <version>${clickhouse-jdbc.version}</version>
             </dependency>
 
         </dependencies>

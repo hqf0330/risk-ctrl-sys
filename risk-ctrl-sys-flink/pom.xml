@@ -40,6 +40,18 @@
             <artifactId>jedis</artifactId>
         </dependency>
 
+        <!-- Flink jdbc connector-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-jdbc_${scala.binary.version}</artifactId>
+        </dependency>
+
+        <!-- clickhouse jdbc driver -->
+        <dependency>
+            <groupId>com.clickhouse</groupId>
+            <artifactId>clickhouse-jdbc</artifactId>
+        </dependency>
+
         <!-- Flink测试依赖-->
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -56,6 +68,7 @@
             <artifactId>risk-ctrl-sys-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
 </project>
